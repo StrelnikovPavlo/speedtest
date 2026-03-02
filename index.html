@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Верстка «website-frontend»</title>
+</head>
+
+<body>
+	<div class="rootpage">
+		<h1>Верстка <span>«website-frontend»</span></h1>
+		<div class="rootpage__info">
+			Опис проєкту
+		</div>
+		<h2>Готові сторінки:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="home.html">Головна</a></li>
+			<li><a target="_blank" href="reservation-new.html">Бронювання консультації</a></li>
+			<li><a target="_blank" href="about.html">Про мене</a></li>
+			<li><a target="_blank" href="services.html">Послуги</a></li>
+			<li><a target="_blank" href="useful-materials.html">Корисні матеріали</a></li>
+			<li><a target="_blank" href="blog.html">Проживання війни: психологія воєнного часу</a></li>
+			<li><a target="_blank" href="privacy-policy.html">Політика конфіденційності</a></li>
+			<li><a target="_blank" href="home-chat.html">Чат</a></li>
+			<li><a target="_blank" href="home-chat-2.html">Чат 2</a></li>
+			<li><a target="_blank" href="course.html">Психологія стосунків. Мій партнер мене не чує</a></li>
+			<li><a target="_blank" href="courses.html">Курси</a></li>
+			<li><a target="_blank" href="contacts.html">Контакти</a></li>
+		</ol>
+		<h2>Попапи:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="home.html#socials">Приєднуйтесь у соц.мережах</a></li>
+			<li><a target="_blank" href="reservation.html#number-reservation">#095743 Ваш номер бронювання</a></li>
+		</ol>
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		background-color: #fff;
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #2F85E7;
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: #2F85E7;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: disc;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		color: #303030;
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+	}
+
+	h1 span {
+		color: #2F85E7;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: #303030;
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+		list-style: decimal;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__list li {
+		color: #2F85E7;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 200px;
+		padding: 20px 65px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+		}
+	}
+
+	.rootpage__contacts a {
+		color: #2F85E7;
+	}
+
+	.rootpage__tnx {
+		background: #c22d63;
+		margin: 0px 0px 1rem 0px;
+	}
+</style>
+
+</html>

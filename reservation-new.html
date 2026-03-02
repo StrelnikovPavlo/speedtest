@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Бронювання експрес консультації</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20260302193050">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll-show class="header">
+			<div class="header__main">
+				<div class="header__container">
+					<a href="/" class="header__logo logo">Romanova</a>
+					<nav data-da=".header__bottom, 1071.98, first" class="header__menu menu">
+						<ul class="menu__list">
+							<li><a href="#" class="active">Головна</a></li>
+							<li><a href="#">Послуги</a></li>
+							<li><a href="#">Курси</a></li>
+							<li><a href="#">Про мене</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Контакти</a></li>
+						</ul>
+					</nav>
+					<div class="header__actions">
+						<div data-da=".header__menu, 767.98, 1" class="header__language-switcher language-switcher">
+							<a href='#' class="language-switcher__header filter__select select__current ">UA</a>
+
+							<ul class="language-switcher__list filter__select__list">
+								<li class="language-switcher__item filter__select__item">
+									<a href="#">UA</a>
+								</li>
+
+								<li class="language-switcher__item filter__select__item">
+									<a href="#">RU</a>
+								</li>
+
+								<li class="language-switcher__item filter__select__item">
+									<a href="#">EN</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#reservation" data-goto="#reservation" data-goto-header class="header__consultation btn btn-blue"><span>Запис на консультацію</span></a>
+						<div class="header__burger">
+							<button type="button" class="header__burger-icon" aria-label="Открыть меню"><span></span></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="header__contacts contacts-header">
+					<div class="contacts-header__caption">Контакти</div>
+					<a href="tel:380964697398" class="contacts-header__item">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#phone"></use>
+						</svg>
+						<span>+ 38(096)469-73-98</span>
+					</a>
+					<a href="mailto:romanova@gmail.com" class="contacts-header__item">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#mail"></use>
+						</svg>
+						<span>romanova@gmail.com</span>
+					</a>
+					<a href="#" class="contacts-header__item contacts-header__item_telegram" target='_blank'>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#mail-filled"></use>
+						</svg>
+						<span>Telegram</span>
+					</a>
+					<a href="#" class="contacts-header__item contacts-header__item_viber" target='_blank'>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#viber"></use>
+						</svg>
+						<span>Viber</span>
+					</a>
+					<div class="contacts-header__socials">
+						<div class="contacts-header__socials-label">Шукайте у соц. мережах:</div>
+						<div class="contacts-header__socials-icons socials">
+							<a href="#" class="socials__icon socials__icon-viber">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#threads"></use>
+								</svg>
+							</a>
+							<a href="#" class="socials__icon socials__icon-telegram">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#mail-filled"></use>
+								</svg>
+							</a>
+							<a href="#" class="socials__icon socials__icon-instagram">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#instagram"></use>
+								</svg>
+							</a>
+							<a href="#" class="socials__icon socials__icon-youtube">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#youtube"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!--		<div class="header-bottom__language-switcher language-switcher">-->
+				<!--			<div class="language-switcher__header filter__select select__current">UA</div>-->
+
+				<!--			<ul class="language-switcher__list filter__select__list">-->
+				<!--				<li class="language-switcher__item filter__select__item">-->
+				<!--					<a href="#">UA</a>-->
+				<!--				</li>-->
+
+				<!--				<li class="language-switcher__item filter__select__item">-->
+				<!--					<a href="#">RU</a>-->
+				<!--				</li>-->
+				<!--			</ul>-->
+				<!--		</div>-->
+			</div>
+		</header>
+		<main class="reservation-page">
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul>
+						<li><a href="#">Головна</a></li>
+						<li><a href="#">Послуги</a></li>
+						<li><a data-popup="#number-reservation" href="#" class="_active">Бронювання консультації</a></li>
+					</ul>
+				</div>
+			</nav>
+			<section class="reservation-page__body reservation">
+				<div class="reservation__container">
+					<h1 class="reservation__title title-section">Бронювання консультації</h1>
+					<form data-ajax action="https://romanova-mental.com/api/v1/consultation" method="post" class="reservation__form" data-popup-message="#number-reservation">
+						<div class="reservation__column">
+							<div class="reservation__block block-reservation">
+								<div class="block-reservation__label">
+									<img src="img/icons/atom.svg" alt=""><span>01</span>|<span>Оберіть тип консультації</span>
+								</div>
+								<div class="block-reservation__content">
+									<div class="block-reservation__row">
+										<label class="consultation-option">
+											<input type="radio" name="consultation_type" value="Перша діагностична онлайн-консультація" checked>
+											<div class="consultation-option__card">Перша діагностична онлайн-консультація</div>
+										</label>
+										<label class="consultation-option">
+											<input type="radio" name="consultation_type" value="Індивідуальна онлайн-консультація">
+											<div class="consultation-option__card">Індивідуальна онлайн-консультація</div>
+										</label>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="reservation__block block-reservation">
+								<div class="block-reservation__label">
+									<img src="img/icons/list.svg" alt=""><span>02</span>|<span>Особисті дані</span>
+								</div>
+								<div class="block-reservation__content">
+									<div class="block-reservation__row">
+										<div class="block-reservation__input">
+											<input data-required type="text" name="name" placeholder="Ваше імя та прізвище*" class="input">
+										</div>
+										<div class="block-reservation__input">
+											<input data-required type="email" name="email" placeholder="Ваша пошта*" class="input">
+										</div>
+										<div class="block-reservation__input">
+											<input data-required type="tel" name="phone" placeholder="Ваше номер телефону*" class="input">
+										</div>
+										<select name="connection_method" data-class-modif="form">
+											<option value="0" disabled data-label>Оберіть зручний спосіб зв’язку*</option>
+											<option value="phone">Зателефонуйте мені</option>
+											<option value="Viber">Напишіть мені в Viber</option>
+											<option value="Telegram">Напишіть мені в Telegram</option>
+										</select>
+										<input data-required id="input-date" type="text" name="scheduled_at" class="input">
+										<input data-required id="input-connection-method" type="text" name="connection_method" class="input">
+										<input id="input-consultation" type="text" name="consultation_type" value="express" class="input">
+									</div>
+									<textarea name="message" cols="30" rows="10" placeholder="Ваше повідомлення"></textarea>
+								</div>
+							</div>
+
+							<div class="reservation__block block-reservation">
+								<div class="block-reservation__label block-reservation__label-date">
+									<img src="img/icons/calendar-bold.svg" alt=""><span>03</span>|<span>Оберіть день онлайн консультації</span>
+								</div>
+								<div class="block-reservation__content block-reservation__content-row">
+									<div id="calendar" class="block-reservation__calendar"></div>
+
+									<div class="block-reservation__time-picker time-picker-reservation">
+										<div class="time-picker-reservation__lead">Час вказано: Evrope/Kyiv</div>
+										<ul class="time-picker-reservation__items">
+											<li class="time-picker-reservation__item">10:00</li>
+											<li class="time-picker-reservation__item">10:30</li>
+											<li class="time-picker-reservation__item">11:00</li>
+											<li class="time-picker-reservation__item">11:30</li>
+											<li class="time-picker-reservation__item">12:00</li>
+											<li class="time-picker-reservation__item">12:30</li>
+											<li class="time-picker-reservation__item">13:00</li>
+											<li class="time-picker-reservation__item">13:30</li>
+											<li class="time-picker-reservation__item">14:00</li>
+											<li class="time-picker-reservation__item">14:30</li>
+											<li class="time-picker-reservation__item">15:00</li>
+											<li class="time-picker-reservation__item disable">15:30</li>
+											<li class="time-picker-reservation__item">16:00</li>
+											<li class="time-picker-reservation__item">16:30</li>
+											<li class="time-picker-reservation__item">17:00</li>
+											<li class="time-picker-reservation__item">17:30</li>
+											<li class="time-picker-reservation__item">18:00</li>
+											<li class="time-picker-reservation__item">18:30</li>
+											<li class="time-picker-reservation__item disable">19:00</li>
+										</ul>
+										<div class="time-picker-reservation__alternative-message">
+											<b>Немає зручного часу? </b><a href="#">Напишіть мені</a> та ми підшукаємо зручний час.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="reservation__info info-reservation">
+							<h2 class="info-reservation__title">Інформація бронювання</h2>
+							<div class="info-reservation__block">
+								<div class="info-reservation__date">Оберіть день та час консультації</div>
+							</div>
+							<div class="info-reservation__block">
+								<div class="info-reservation__item info-reservation__item-consultation">
+									<div id="info-consultation" class="info-reservation__item-label">Перша діагностична онлайн-консультація</div>
+									<div class="info-reservation__item-quantity">1 особа</div>
+								</div>
+								<div class="info-reservation__item info-reservation__item-time">
+									<div class="info-reservation__item-label">Тривалість</div>
+									<span>|</span>
+									<div class="info-reservation__item-value">~ 60 хв.</div>
+								</div>
+							</div>
+							<div class="info-reservation__block">
+								<div class="info-reservation__item info-reservation__item-price">
+									<div class="info-reservation__item-label">Вартість</div>
+									<span>|</span>
+									<div class="info-reservation__item-sum">300 грн.</div>
+								</div>
+							</div>
+							<button type="submit" class="info-reservation__submit info-reservation__submit-disabled btn btn-blue" data-consultation="steamy" data-price="300">Підтвердити бронювання</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+					<div class="footer__column">
+						<a href="#" class="footer__logo logo" aria-label="Перейти на головну сторінку">Romanova</a>
+						<p class="footer__text">Ваш надійний психолог, мені важливо донести, що моя ціль, як психолога, допомогти вам побачити в собі все краще, що ви маєте, допомогти вам розкритись</p>
+						<div class="footer__schedule schedule">
+							<div class="schedule__label">Я на звязку:</div>
+							<p class="schedule__value">
+								<time datetime="T10:00">ПН - ПТ: з 10:00 до 20:00</time>
+							</p>
+							<p class="schedule__value">СБ - НД: вихідний</p>
+						</div>
+					</div>
+					<div class="footer__column contacts-info">
+						<div class="contacts-info__caption">Контакти</div>
+						<div class="contacts-info__items">
+							<a href="tel:380964697398" class="contacts-info__link" aria-label="Телефон: +38(096)469-73-98">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#phone"></use>
+								</svg>
+								<span>+ 38(096)469-73-98</span>
+							</a>
+							<a href="mailto:romanova@gmail.com" class="contacts-info__link">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#mail"></use>
+								</svg>
+								<span>romanova@gmail.com</span>
+							</a>
+						</div>
+						<div class="contacts-info__caption contacts-info__caption--footer">Шукайте у соц.мережах</div>
+						<div class="contacts-info__items">
+							<a href="#" class="contacts-info__link contacts-info__link_telegram">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#mail-filled"></use>
+								</svg>
+								<span>Telegram</span>
+							</a>
+							<a href="#" class="contacts-info__link contacts-info__link_viber">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#viber"></use>
+								</svg>
+								<span>Viber</span>
+							</a>
+							<a href="#" class="contacts-info__link contacts-info__link_viber">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#instagram"></use>
+								</svg>
+								<span>Instagram</span>
+							</a>
+							<a href="#" class="contacts-info__link contacts-info__link_viber">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#threads"></use>
+								</svg>
+								<span>Threads</span>
+							</a>
+						</div>
+					</div>
+					<form data-ajax action="https://jsonplaceholder.typicode.com/users" method="post" class="footer__column form-footer" data-popup-message="#success-send">
+						<div class="footer__column-caption form-footer__caption">Залишились питання?</div>
+						<div class="form-footer__inputs">
+							<div class="form-footer__input">
+								<input data-required type="text" name="name" placeholder="Ваше імя*" class="input" aria-label="Ваше ім'я">
+							</div>
+							<div class="form-footer__input">
+								<input data-required type="tel" name="phone" placeholder="Ваш номер телефону*" class="input" aria-label="Ваш номер телефону">
+							</div>
+							<div class="form-footer__input">
+								<input data-required type="email" name="email" placeholder="Ваша пошта*" class="input" aria-label="Ваша пошта">
+							</div>
+							<div class="form-footer__input">
+								<textarea name="message" cols="30" rows="10" placeholder="Ваше питання*"></textarea>
+							</div>
+						</div>
+						<button type="submit" id="submitBtn" class="form-footer__submit btn btn-blue" aria-label="Надіслати форму">Надіслати</button>
+					</form>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__container">
+					<p class="footer__copyright-text">© Romanova 2023 | Усі права захищені</p>
+					<a href="privacy-policy.html" class="footer__privacy-policy">Політика конфіденційності</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="socials" aria-hidden="true" class="popup socials-popup">
+		<div class="popup__wrapper">
+			<svg class="popup-line" xmlns="http://www.w3.org/2000/svg" width="1920" height="673" viewBox="0 0 1920 673" fill="none">
+				<path d="M1970 220.572C1747 399.572 1308.56 330.572 1273.5 203.072C1257 143.072 1325.5 87.5718 1461 193.215C1592 -288.928 1784.75 254.838 1382.5 573.072C1033 849.572 266 490.5 -8 96" stroke="url(#paint0_linear_242_2373)" stroke-width="3" />
+				<defs>
+					<linearGradient id="paint0_linear_242_2373" x1="676" y1="623.5" x2="1793.5" y2="291.5" gradientUnits="userSpaceOnUse">
+						<stop stop-color="white" />
+						<stop offset="1" stop-color="#8DC1FF" />
+					</linearGradient>
+				</defs>
+			</svg>
+			<div class="popup__content">
+				<div class="socials-popup__content">
+					<button data-close type="button" class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+							<path d="M9.91602 9.91699L24.0827 24.0837M9.91602 24.0837L24.0827 9.91699" stroke="#87BFFF" stroke-width="3.54167" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class="socials-popup__title"><span>Приєднуйтесь</span> у соц.мережах </div>
+					<div class="socials-popup__text">Обирайте зручний для Вас мессенджер або соціальну мережу <b>та слідкуйте за корисною інформацією!</b></div>
+					<div class="socials-popup__items">
+						<a href="#" class="socials-popup__item socials-popup__item--instagram btn"></a>
+						<a href="#" class="socials-popup__item socials-popup__item--facebook btn"></a>
+						<a href="#" class="socials-popup__item socials-popup__item--twitter btn"></a>
+						<a href="#" class="socials-popup__item socials-popup__item--youtube btn"></a>
+						<a href="#" class="socials-popup__item socials-popup__item--telegram btn"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="number-reservation" aria-hidden="true" class="popup reservation-popup">
+		<div class="popup__wrapper">
+			<svg class="popup-line" xmlns="http://www.w3.org/2000/svg" width="1920" height="673" viewBox="0 0 1920 673" fill="none">
+				<path d="M1970 220.572C1747 399.572 1308.56 330.572 1273.5 203.072C1257 143.072 1325.5 87.5718 1461 193.215C1592 -288.928 1784.75 254.838 1382.5 573.072C1033 849.572 266 490.5 -8 96" stroke="url(#paint0_linear_242_2373)" stroke-width="3" />
+				<defs>
+					<linearGradient id="paint0_linear_242_2373" x1="676" y1="623.5" x2="1793.5" y2="291.5" gradientUnits="userSpaceOnUse">
+						<stop stop-color="white" />
+						<stop offset="1" stop-color="#8DC1FF" />
+					</linearGradient>
+				</defs>
+			</svg>
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+						<path d="M9.91602 9.91699L24.0827 24.0837M9.91602 24.0837L24.0827 9.91699" stroke="#87BFFF" stroke-width="3.54167" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<div class="reservation-popup__content">
+					<div class="reservation-popup__number title-section"><span>#095743</span> Ваш номер бронювання </div>
+					<div class="reservation-popup__text"><b>Дякуємо!</b> Деталі бронювання будуть надіслані <b>Вам на пошту.</b></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="success-send" aria-hidden="true" class="popup reservation-popup">
+		<div class="popup__wrapper">
+			<svg class="popup-line" xmlns="http://www.w3.org/2000/svg" width="1920" height="673" viewBox="0 0 1920 673" fill="none">
+				<path d="M1970 220.572C1747 399.572 1308.56 330.572 1273.5 203.072C1257 143.072 1325.5 87.5718 1461 193.215C1592 -288.928 1784.75 254.838 1382.5 573.072C1033 849.572 266 490.5 -8 96" stroke="url(#paint0_linear_242_2373)" stroke-width="3" />
+				<defs>
+					<linearGradient id="paint0_linear_242_2373" x1="676" y1="623.5" x2="1793.5" y2="291.5" gradientUnits="userSpaceOnUse">
+						<stop stop-color="white" />
+						<stop offset="1" stop-color="#8DC1FF" />
+					</linearGradient>
+				</defs>
+			</svg>
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+						<path d="M9.91602 9.91699L24.0827 24.0837M9.91602 24.0837L24.0827 9.91699" stroke="#87BFFF" stroke-width="3.54167" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<div class="reservation-popup__content">
+					<div class="reservation-popup__number title-section">Ваше повідомлення відправлено</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/animations.min.js?_v=20260302193050"></script>
+	<script src="js/app.min.js?_v=20260302193050"></script>
+</body>
+
+</html>
