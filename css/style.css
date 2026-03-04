@@ -634,6 +634,11 @@ textarea {
   width: 100%;
   border-radius: 100px;
 }
+@media (max-width: 61.99875em) {
+  .select__title {
+    font-size: 14px;
+  }
+}
 .select__value {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -714,6 +719,11 @@ textarea {
   background-color: #fff;
   border: 1px solid #2F85E7;
   overflow: hidden;
+}
+@media (max-width: 61.99875em) {
+  .select__options {
+    font-size: 14px;
+  }
 }
 .select__scroll {
   overflow-y: auto;
@@ -1433,9 +1443,11 @@ body::after {
   width: 100%;
   height: 100%;
 }
-.icon-service img {
+.icon-service svg {
   position: relative;
   z-index: 2;
+  width: 44px;
+  height: 44px;
 }
 
 .desc-label {
@@ -4771,46 +4783,46 @@ body::after {
   }
 }
 @media (min-width: 75em) {
-  .work-with__item-title img {
+  .work-with__item-title svg {
     width: 3.5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (width: clamp( 1.5rem , 0.7727272727rem  +  3.6363636364vw , 3.5rem )) {
-    .work-with__item-title img {
+    .work-with__item-title svg {
       width: clamp( 1.5rem , 0.7727272727rem  +  3.6363636364vw , 3.5rem );
     }
   }
   @supports not (width: clamp( 1.5rem , 0.7727272727rem  +  3.6363636364vw , 3.5rem )) {
-    .work-with__item-title img {
+    .work-with__item-title svg {
       width: calc(1.5rem + 2 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .work-with__item-title img {
+  .work-with__item-title svg {
     width: 1.5rem;
   }
 }
 @media (min-width: 75em) {
-  .work-with__item-title img {
+  .work-with__item-title svg {
     height: 3.5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (height: clamp( 1.5rem , 0.7727272727rem  +  3.6363636364vw , 3.5rem )) {
-    .work-with__item-title img {
+    .work-with__item-title svg {
       height: clamp( 1.5rem , 0.7727272727rem  +  3.6363636364vw , 3.5rem );
     }
   }
   @supports not (height: clamp( 1.5rem , 0.7727272727rem  +  3.6363636364vw , 3.5rem )) {
-    .work-with__item-title img {
+    .work-with__item-title svg {
       height: calc(1.5rem + 2 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .work-with__item-title img {
+  .work-with__item-title svg {
     height: 1.5rem;
   }
 }
@@ -4982,6 +4994,11 @@ body::after {
 }
 .home-service-item__icon {
   margin: 0px auto -48px auto;
+}
+.home-service-item__icon svg {
+  width: 44px;
+  height: 44px;
+  z-index: 2;
 }
 .home-service-item__content {
   display: -webkit-box;
@@ -5375,7 +5392,6 @@ body::after {
   position: absolute;
   top: -75px;
   right: -305px;
-  z-index: 2;
 }
 @media (max-width: 61.99875em) {
   .home-about__line {
@@ -5691,10 +5707,6 @@ body::after {
   .reviews__slide {
     padding: 1.5rem;
   }
-}
-.reviews__icon {
-  background: url("../img/icons/quotes.svg") no-repeat;
-  background-size: contain;
 }
 @media (min-width: 75em) {
   .reviews__icon {
@@ -9097,73 +9109,73 @@ body::after {
     margin-bottom: 1rem;
   }
 }
-.block-reservation__label img {
+.block-reservation__label svg {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 @media (min-width: 75em) {
-  .block-reservation__label img {
+  .block-reservation__label svg {
     margin-right: 0.5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (margin-right: clamp( 0.25rem , 0.1590909091rem  +  0.4545454545vw , 0.5rem )) {
-    .block-reservation__label img {
+    .block-reservation__label svg {
       margin-right: clamp( 0.25rem , 0.1590909091rem  +  0.4545454545vw , 0.5rem );
     }
   }
   @supports not (margin-right: clamp( 0.25rem , 0.1590909091rem  +  0.4545454545vw , 0.5rem )) {
-    .block-reservation__label img {
+    .block-reservation__label svg {
       margin-right: calc(0.25rem + 0.25 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .block-reservation__label img {
+  .block-reservation__label svg {
     margin-right: 0.25rem;
   }
 }
 @media (min-width: 75em) {
-  .block-reservation__label img {
+  .block-reservation__label svg {
     width: 1.5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (width: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
-    .block-reservation__label img {
+    .block-reservation__label svg {
       width: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem );
     }
   }
   @supports not (width: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
-    .block-reservation__label img {
+    .block-reservation__label svg {
       width: calc(1.125rem + 0.375 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .block-reservation__label img {
+  .block-reservation__label svg {
     width: 1.125rem;
   }
 }
 @media (min-width: 75em) {
-  .block-reservation__label img {
+  .block-reservation__label svg {
     height: 1.5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (height: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
-    .block-reservation__label img {
+    .block-reservation__label svg {
       height: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem );
     }
   }
   @supports not (height: clamp( 1.125rem , 0.9886363636rem  +  0.6818181818vw , 1.5rem )) {
-    .block-reservation__label img {
+    .block-reservation__label svg {
       height: calc(1.125rem + 0.375 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .block-reservation__label img {
+  .block-reservation__label svg {
     height: 1.125rem;
   }
 }
