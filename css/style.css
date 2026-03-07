@@ -8600,7 +8600,6 @@ body::after {
 .info-blog__item span {
   color: #303030;
   font-size: 16px;
-  font-weight: 300;
   line-height: 1.25;
 }
 @media (max-width: 61.99875em) {
@@ -8608,31 +8607,16 @@ body::after {
     font-size: 12px;
   }
 }
-.info-blog__item::before {
-  content: "";
-  width: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 20px;
-          flex: 0 0 20px;
-  height: 20px;
-  display: block;
-}
 @media (max-width: 61.99875em) {
-  .info-blog__item::before {
+  .info-blog__item svg {
     width: 14px;
     height: 14px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 14px;
-            flex: 0 0 14px;
   }
 }
 @media (max-width: 47.99875em) {
-  .info-blog__item::before {
+  .info-blog__item svg {
     width: 16px;
     height: 16px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16px;
-            flex: 0 0 16px;
   }
 }
 @media (max-width: 61.99875em) {
@@ -8647,21 +8631,6 @@ body::after {
        -moz-column-gap: 8px;
             column-gap: 8px;
   }
-}
-.info-blog__item-date::before {
-  display: none;
-}
-.info-blog__item-time::before {
-  background: url("../img/icons/twotone_timer.svg") no-repeat;
-  background-size: contain;
-}
-.info-blog__item-previews::before {
-  background: url("../img/icons/eye.svg") no-repeat;
-  background-size: contain;
-}
-.info-blog__item-share::before {
-  background: url("../img/icons/share.svg") no-repeat;
-  background-size: contain;
 }
 .info-blog__item-share span {
   color: #2F85E7;
