@@ -34,13 +34,6 @@
   font-weight: 800;
   font-style: normal;
 }
-@font-face {
-  font-family: Gilroy;
-  font-display: swap;
-  src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
 [class*=__container] {
   width: 100%;
   margin: 0 auto;
@@ -1063,162 +1056,6 @@ body::after {
     top: -10%;
     left: 20%;
   }
-}
-
-.socials-popup__content {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 425px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 61.99875em) {
-  .socials-popup__content {
-    max-width: 334px;
-  }
-}
-.socials-popup__title {
-  font-size: 58px;
-  line-height: 1.2068965517;
-  font-weight: 800;
-  margin-bottom: 42px;
-}
-.socials-popup__title span {
-  color: #2F85E7;
-}
-@media (max-width: 61.99875em) {
-  .socials-popup__title {
-    font-size: 42px;
-    margin-bottom: 24px;
-  }
-}
-@media (max-width: 47.99875em) {
-  .socials-popup__title {
-    margin-bottom: 20px;
-    font-size: 35px;
-  }
-}
-.socials-popup__text {
-  line-height: 1.1875;
-  margin-bottom: 34px;
-}
-@media (max-width: 61.99875em) {
-  .socials-popup__text {
-    margin-bottom: 12px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 47.99875em) {
-  .socials-popup__text {
-    margin-bottom: 16px;
-  }
-}
-.socials-popup__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  row-gap: 10px;
-}
-@media (max-width: 61.99875em) {
-  .socials-popup__items {
-    -webkit-column-gap: 16px;
-       -moz-column-gap: 16px;
-            column-gap: 16px;
-  }
-}
-@media (max-width: 47.99875em) {
-  .socials-popup__items {
-    -webkit-column-gap: 8px;
-       -moz-column-gap: 8px;
-            column-gap: 8px;
-  }
-}
-.socials-popup__item {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border-radius: 116.071px;
-  background: #FFF;
-  -webkit-box-shadow: 0px 4.643px 4.643px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4.643px 4.643px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-.socials-popup__item::before {
-  content: "";
-  width: 37px;
-  height: 37px;
-  display: block;
-}
-@media (max-width: 61.99875em) {
-  .socials-popup__item::before {
-    width: 24px;
-    height: 24px;
-  }
-}
-@media (max-width: 47.99875em) {
-  .socials-popup__item::before {
-    width: 16px;
-    height: 16px;
-  }
-}
-@media (any-hover: hover) {
-  .socials-popup__item:hover {
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-@media (max-width: 61.99875em) {
-  .socials-popup__item {
-    width: 50px;
-    height: 50px;
-  }
-}
-@media (max-width: 47.99875em) {
-  .socials-popup__item {
-    width: 40px;
-    height: 40px;
-  }
-}
-.socials-popup__item--instagram::before {
-  background: url("../img/socials/instagram.svg") center no-repeat;
-  background-size: contain;
-}
-.socials-popup__item--facebook::before {
-  background: url("../img/socials/facebook.svg") center no-repeat;
-  background-size: contain;
-}
-.socials-popup__item--twitter::before {
-  background: url("../img/socials/twitter.svg") center no-repeat;
-  background-size: contain;
-}
-.socials-popup__item--youtube::before {
-  background: url("../img/socials/youtube.svg") center no-repeat;
-  background-size: contain;
-}
-.socials-popup__item--telegram::before {
-  background: url("../img/socials/telegram.svg") center no-repeat;
-  background-size: contain;
-}
-.socials-popup__item--threads::before {
-  background: url("../img/socials/threads.svg") center no-repeat;
-  background-size: contain;
 }
 
 .reservation-popup__content {
@@ -5088,12 +4925,7 @@ body::after {
           column-gap: 10px;
   color: #C2BEBE;
 }
-.home-service-item__time span:first-child {
-  background: url("../img/icons/twotone_timer.svg") 100% no-repeat;
-  width: 20px;
-  height: 20px;
-}
-.home-service-item__time span:last-child {
+.home-service-item__time span {
   font-size: 16px;
   line-height: 1.25;
   color: #303030;
@@ -5110,36 +4942,31 @@ body::after {
           column-gap: 10px;
   color: #C2BEBE;
 }
-.home-service-item__price span:first-child {
-  background: url("../img/icons/wallets.svg") 100% no-repeat;
-  width: 20px;
-  height: 20px;
-}
-.home-service-item__price span:last-child {
+.home-service-item__price span {
   color: #2F85E7;
   text-align: right;
   font-weight: 600;
   line-height: 1.2;
 }
 @media (min-width: 75em) {
-  .home-service-item__price span:last-child {
+  .home-service-item__price span {
     font-size: 1rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
   @supports (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
-    .home-service-item__price span:last-child {
+    .home-service-item__price span {
       font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem );
     }
   }
   @supports not (font-size: clamp( 0.875rem , 0.8295454545rem  +  0.2272727273vw , 1rem )) {
-    .home-service-item__price span:last-child {
+    .home-service-item__price span {
       font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 55);
     }
   }
 }
 @media (max-width: 20em) {
-  .home-service-item__price span:last-child {
+  .home-service-item__price span {
     font-size: 0.875rem;
   }
 }
@@ -6264,16 +6091,8 @@ body::after {
           column-gap: 10px;
   color: #C2BEBE;
 }
-.item-material__time::before {
-  content: "";
-  background: url("../img/icons/twotone_timer.svg") no-repeat;
-  width: 20px;
-  height: 20px;
-  display: block;
-  background-size: contain;
-}
 @media (max-width: 61.99875em) {
-  .item-material__time::before {
+  .item-material__time svg {
     width: 14px;
     height: 14px;
   }

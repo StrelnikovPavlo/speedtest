@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20260304192304">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260307180307">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -148,7 +148,16 @@
 									<a href='https://www.threads.net/@romanova_mental' target='_blank' class="who__socials-icon who__socials-icon--treads" aria-label="Перейти на наш Threads"></a>
 								</div>
 							</div>
-							<picture><source srcset="img/homePage/romanova.webp" type="image/webp"><img src="img/homePage/romanova.png" alt="Романова Наталія" width="719" height="684" fetchpriority="high" decoding="async"></picture>
+							<!-- <picture><source srcset="img/homePage/romanova.webp" type="image/webp"><img src="img/homePage/romanova.png" alt="Романова Наталія" width="719" height="684" fetchpriority="high" decoding="async"></picture> -->
+							<img src="img/homePage/romanova-768.webp" srcset="
+									img/homePage/romanova-320.webp 399w,
+									img/homePage/romanova-768.webp 495w,
+									img/homePage/romanova.webp 719w
+									" sizes="
+									(max-width: 480px) 399px,
+									(max-width: 767px) 495px,
+									719px
+									" alt="Романова Наталія" width="719" height="684" fetchpriority="high" decoding="async">
 						</div>
 					</div>
 				</div>
@@ -166,11 +175,9 @@
 									<div class="work-with__item-header">
 										<div class="work-with__item-number">01</div>
 										<div class="work-with__item-title">
-											<!-- <img src="img/icons/scale.svg" alt="icon"> -->
 											<svg>
 												<use xlink:href="img/icons/icons.svg#scale"></use>
 											</svg>
-
 											<span>Work-life balance:</span>
 										</div>
 									</div>
@@ -187,7 +194,6 @@
 									<div class="work-with__item-header">
 										<div class="work-with__item-number">02</div>
 										<div class="work-with__item-title">
-											<!-- <img src="img/icons/user-love.svg" alt="icon"> -->
 											<svg>
 												<use xlink:href="img/icons/icons.svg#user-love"></use>
 											</svg>
@@ -209,7 +215,6 @@
 									<div class="work-with__item-header">
 										<div class="work-with__item-number">03</div>
 										<div class="work-with__item-title">
-											<!-- <img src="img/icons/hand-heart.svg" alt="icon"> -->
 											<svg>
 												<use xlink:href="img/icons/icons.svg#hand-heart"></use>
 											</svg>
@@ -225,7 +230,6 @@
 									<div class="work-with__item-header">
 										<div class="work-with__item-number">04</div>
 										<div class="work-with__item-title">
-											<!-- <img src="img/icons/oval-love.svg" alt="icon"> -->
 											<svg>
 												<use xlink:href="img/icons/icons.svg#oval-love"></use>
 											</svg>
@@ -254,7 +258,6 @@
 					<div data-anim data-anim-hide class="home-services__body">
 						<div class="home-services__service home-service-item">
 							<div class="home-service-item__icon icon-service">
-								<!-- <img src="img/icons/solar.svg" alt="icon" width="44" height="44"> -->
 								<svg>
 									<use xlink:href="img/icons/icons.svg#solar"></use>
 								</svg>
@@ -263,10 +266,16 @@
 								<h3 class="home-service-item__title">Перша діагностична онлайн-консультація</h3>
 								<div class="home-service-item__row">
 									<div class="home-service-item__time">
-										<span></span>|<span>~ 40 хв.</span>
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#twotone_timer"></use>
+										</svg>
+										|<span>~ 40 хв.</span>
 									</div>
 									<div class="home-service-item__price">
-										<span></span>|<span>400 грн</span>
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#wallets"></use>
+										</svg>
+										|<span>400 грн</span>
 									</div>
 								</div>
 								<div class="home-service-item__desc">
@@ -280,16 +289,21 @@
 								<svg>
 									<use xlink:href="img/icons/icons.svg#hand-heart"></use>
 								</svg>
-								<!-- <img src="img/icons/hand-heart.svg" alt="icon" width="44" height="44"> -->
 							</div>
 							<div class="home-service-item__content">
 								<h3 class="home-service-item__title">Індивідуальна онлайн-консультація</h3>
 								<div class="home-service-item__row">
 									<div class="home-service-item__time">
-										<span></span>|<span>~ 60 хв.</span>
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#twotone_timer"></use>
+										</svg>
+										|<span>~ 60 хв.</span>
 									</div>
 									<div class="home-service-item__price">
-										<span></span>|<span>800 грн</span>
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#wallets"></use>
+										</svg>
+										|<span>800 грн</span>
 									</div>
 								</div>
 								<div class="home-service-item__desc">
@@ -323,7 +337,6 @@
 											<svg>
 												<use xlink:href="img/icons/icons.svg#chat-line"></use>
 											</svg>
-											<!-- <img src="img/icons/chat-line.svg" alt="icon" width="44" height="44"> -->
 										</div>
 										<p class="consultation-step__text">Ви надсилаєте запит на онлайн консультацію з бажаним датою та часом</p>
 									</div>
@@ -335,7 +348,6 @@
 											<svg>
 												<use xlink:href="img/icons/icons.svg#add-folder"></use>
 											</svg>
-											<!-- <img src="img/icons/add-folder.svg" alt="icon" width="44" height="44"> -->
 										</div>
 										<p class="consultation-step__text">Я опрацьовую Ваш запит та надсилаю всю необхідну інформацію для зв`язку</p>
 									</div>
@@ -347,7 +359,6 @@
 											<svg>
 												<use xlink:href="img/icons/icons.svg#chat-round-like" width="44" height="44"></use>
 											</svg>
-											<!-- <img src="img/icons/chat-round-like.svg" alt="icon" width="44" height="44"> -->
 										</div>
 										<p class="consultation-step__text">На консультації з моєю професійною підтримкою, Ви продуктивно пропрацьовуєте своє питання</p>
 									</div>
@@ -359,7 +370,6 @@
 											<svg>
 												<use xlink:href="img/icons/icons.svg#checklist-minimalistic"></use>
 											</svg>
-											<!-- <img src="img/icons/checklist-minimalistic.svg" alt="icon" width="44" height="44"> -->
 										</div>
 										<p class="consultation-step__text">Після кожної зустрічі, Ви отримуєте домашнє завдання (за потреби) для закріплення резкльтату після консультації</p>
 									</div>
@@ -541,7 +551,12 @@
 								<picture><source data-srcset="img/useful-material/1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/useful-material/1.jpg" src="img/useful-material/1.jpg" alt="img"></picture>
 								<div class="item-material__info">
 									<div class="item-material__info-item item-material__date">12.09.23</div>
-									<div class="item-material__info-item item-material__time">|<span>~ 20 хв.</span></div>
+									<div class="item-material__info-item item-material__time">
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#twotone_timer"></use>
+										</svg>
+										|<span>~ 20 хв.</span>
+									</div>
 								</div>
 							</a>
 							<div class="item-material__content">
@@ -562,7 +577,12 @@
 								<picture><source data-srcset="img/useful-material/2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/useful-material/2.jpg" src="img/useful-material/2.jpg" alt="img"></picture>
 								<div class="item-material__info">
 									<div class="item-material__info-item item-material__date">12.09.23</div>
-									<div class="item-material__info-item item-material__time">|<span>~ 15 хв.</span></div>
+									<div class="item-material__info-item item-material__time">
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#twotone_timer"></use>
+										</svg>
+										|<span>~ 15 хв.</span>
+									</div>
 								</div>
 							</a>
 							<div class="item-material__content">
@@ -583,7 +603,12 @@
 								<picture><source data-srcset="img/useful-material/3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/useful-material/3.png" src="img/useful-material/3.png" alt="img"></picture>
 								<div class="item-material__info">
 									<div class="item-material__info-item item-material__date">18.09.23</div>
-									<div class="item-material__info-item item-material__time">|<span>~30 хв.</span></div>
+									<div class="item-material__info-item item-material__time">
+										<svg width="20" height="20">
+											<use xlink:href="img/icons/icons.svg#twotone_timer"></use>
+										</svg>
+										|<span>~30 хв.</span>
+									</div>
 								</div>
 							</a>
 							<div class="item-material__content">
@@ -769,8 +794,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="js/animations.min.js?_v=20260304192304"></script> -->
-	<script src="js/app.min.js?_v=20260304192304"></script>
+	<!-- <script src="js/animations.min.js?_v=20260307180307"></script> -->
+	<script src="js/app.min.js?_v=20260307180307"></script>
 </body>
 
 </html>
