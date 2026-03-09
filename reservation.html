@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20260307184702">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260309193813">
+	<link rel="stylesheet" href="css/calendar.min.css?_v=20260309193813">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,48 +135,69 @@
 			</nav>
 			<section class="reservation-page__body reservation">
 				<div class="reservation__container">
-					<h1 class="reservation__title title-section">Бронювання <span>експрес консультації</span></h1>
+					<h1 class="reservation__title title-section">Бронювання консультації</h1>
 					<form data-ajax action="https://romanova-mental.com/api/v1/consultation" method="post" class="reservation__form" data-popup-message="#number-reservation">
 						<div class="reservation__column">
 							<div class="reservation__block block-reservation">
-								<div class="block-reservation__label desc-label">
-									<span></span>|<strong>Особисті дані</strong>
+								<div class="block-reservation__label">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#atom"></use>
+									</svg>
+									<span>01</span>|<span>Оберіть тип консультації</span>
 								</div>
 								<div class="block-reservation__content">
-									<div class="block-reservation__input">
-										<input data-required type="text" name="name" placeholder="Ваше імя та прізвище*" class="input">
+									<div class="block-reservation__row">
+										<label class="consultation-option">
+											<input type="radio" name="consultation_type" data-price="600" value="diagnostic" data-label="Перша діагностична онлайн-консультація" checked>
+											<div class="consultation-option__card">Перша діагностична онлайн-консультація</div>
+										</label>
+										<label class="consultation-option">
+											<input type="radio" name="consultation_type" data-price="300" value="individual" data-label="Індивідуальна онлайн-консультація">
+											<div class="consultation-option__card">Індивідуальна онлайн-консультація</div>
+										</label>
 									</div>
+								</div>
+							</div>
+
+
+							<div class="reservation__block block-reservation">
+								<div class="block-reservation__label">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#list"></use>
+									</svg>
+									<span>02</span>|<span>Особисті дані</span>
+								</div>
+								<div class="block-reservation__content">
 									<div class="block-reservation__row">
 										<div class="block-reservation__input">
-											<input data-required type="tel" name="phone" placeholder="Ваше номер телефону*" class="input">
+											<input data-required type="text" name="name" placeholder="Ваше імя та прізвище*" class="input">
 										</div>
 										<div class="block-reservation__input">
 											<input data-required type="email" name="email" placeholder="Ваша пошта*" class="input">
 										</div>
+										<div class="block-reservation__input">
+											<input data-required type="tel" name="phone" placeholder="Ваше номер телефону*" class="input">
+										</div>
+										<select name="connection_method" data-class-modif="form">
+											<option value="0" disabled data-label>Оберіть зручний спосіб зв’язку*</option>
+											<option value="phone">Зателефонуйте мені</option>
+											<option value="Viber">Напишіть мені в Viber</option>
+											<option value="Telegram">Напишіть мені в Telegram</option>
+										</select>
 										<input data-required id="input-date" type="text" name="scheduled_at" class="input">
-										<input data-required id="input-connection-method" type="text" name="connection_method" class="input">
-										<input id="input-consultation" type="text" name="consultation_type" value="express" class="input">
+										<!-- <input data-required id="input-connection-method" type="text" name="connection_method" class="input">
+                              <input id="input-consultation" type="text" name="consultation_type" value="express" class="input"> -->
 									</div>
 									<textarea name="message" cols="30" rows="10" placeholder="Ваше повідомлення"></textarea>
 								</div>
 							</div>
 
 							<div class="reservation__block block-reservation">
-								<div class="block-reservation__label desc-label">
-									<span></span>|<strong>Оберіть зручний спосіб зв’язку</strong>
-								</div>
-								<div class="block-reservation__content">
-									<div class="block-reservation__connection-methods">
-										<div class="block-reservation__connection-method" data-connection="phone">Зателефонуйте мені</div>
-										<div class="block-reservation__connection-method selected" data-connection="viber">Напишіть мені в Viber</div>
-										<div class="block-reservation__connection-method" data-connection="telegram">Напишіть мені в Telegram</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="reservation__block block-reservation">
-								<div class="block-reservation__label block-reservation__label-date desc-label">
-									<span></span>|<strong>Оберіть день онлайн консультації</strong>
+								<div class="block-reservation__label block-reservation__label-date">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#calendar-bold"></use>
+									</svg>
+									<span>03</span>|<span>Оберіть день онлайн консультації</span>
 								</div>
 								<div class="block-reservation__content block-reservation__content-row">
 									<div id="calendar" class="block-reservation__calendar"></div>
@@ -217,14 +239,11 @@
 							</div>
 							<div class="info-reservation__block">
 								<div class="info-reservation__item info-reservation__item-consultation">
-									<div class="info-reservation__item-label">Парне консультування</div>
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-										<path d="M8.3987 8L5.33203 4.93333L6.26536 4L10.2654 8L6.26536 12L5.33203 11.0667L8.3987 8Z" fill="#BABABA" />
-									</svg>
-									<div class="info-reservation__item-quantity">2 особи</div>
+									<div id="info-consultation" class="info-reservation__item-label">Перша діагностична онлайн-консультація</div>
+									<div class="info-reservation__item-quantity">1 особа</div>
 								</div>
 								<div class="info-reservation__item info-reservation__item-time">
-									<div class="info-reservation__item-label">Тривалість сессії</div>
+									<div class="info-reservation__item-label">Тривалість</div>
 									<span>|</span>
 									<div class="info-reservation__item-value">~ 60 хв.</div>
 								</div>
@@ -233,7 +252,7 @@
 								<div class="info-reservation__item info-reservation__item-price">
 									<div class="info-reservation__item-label">Вартість</div>
 									<span>|</span>
-									<div class="info-reservation__item-sum">300 грн.</div>
+									<div id="info-price" class="info-reservation__item-sum">300 грн.</div>
 								</div>
 							</div>
 							<button type="submit" class="info-reservation__submit info-reservation__submit-disabled btn btn-blue" data-consultation="steamy" data-price="300">Підтвердити бронювання</button>
@@ -407,8 +426,9 @@
 			</div>
 		</div>
 	</div>
-	<!-- <script src="js/animations.min.js?_v=20260307184702"></script> -->
-	<script src="js/app.min.js?_v=20260307184702"></script>
+
+	<script src="js/calendar.min.js?_v=20260309193813"></script>
+	<script src="js/app.min.js?_v=20260309193813"></script>
 </body>
 
 </html>
