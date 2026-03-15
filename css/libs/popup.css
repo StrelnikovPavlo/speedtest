@@ -1,0 +1,248 @@
+body::after {
+  content: "";
+  background: rgba(47, 133, 231, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease 0s;
+  transition: opacity 0.8s ease 0s;
+  pointer-events: none;
+  z-index: 149;
+}
+
+.popup-show body::after {
+  opacity: 1;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px 10px;
+  -webkit-transition: visibility 0.8s ease 0s;
+  transition: visibility 0.8s ease 0s;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.popup_show {
+  z-index: 150;
+  visibility: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+.popup_show .popup-line {
+  visibility: visible;
+  -webkit-transform: scale(1) translateX(-50%);
+      -ms-transform: scale(1) translateX(-50%);
+          transform: scale(1) translateX(-50%);
+}
+
+.popup_show .popup__content {
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.popup__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  position: relative;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  border-radius: 30px;
+  background: #FFF;
+  padding: 85px 20px;
+  width: 100%;
+  max-width: 581px;
+  z-index: 10;
+}
+
+.lock .popup__content {
+  visibility: visible;
+}
+
+.popup__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.popup-line {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  visibility: hidden;
+  -webkit-transform: scale(0) translateX(-50%);
+      -ms-transform: scale(0) translateX(-50%);
+          transform: scale(0) translateX(-50%);
+}
+
+.reservation-popup__content {
+  text-align: center;
+  max-width: 425px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reservation-popup__content span {
+  display: block;
+}
+
+.reservation-popup__content *:last-child {
+  margin-bottom: 0;
+}
+
+.reservation-popup__number {
+  margin-bottom: 29px;
+}
+
+.reservation-popup__text {
+  color: #303030;
+  line-height: 1.1875;
+}
+
+@media (min-width: 75em) {
+  .popup-line {
+    width: 123.625rem;
+  }
+
+  .popup-line {
+    height: 41.875rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .popup-line {
+    top: 10%;
+  }
+}
+
+@media (max-width: 20em) {
+  .popup-line {
+    width: 45.4375rem;
+  }
+
+  .popup-line {
+    height: 37.5rem;
+  }
+}
+
+@media (max-width: 61.99875em) {
+  .popup__content {
+    padding: 65px 20px;
+    max-width: 464px;
+  }
+
+  .popup__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .popup-line {
+    top: 0;
+  }
+
+  .reservation-popup__number {
+    font-size: 42px !important;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .popup__content {
+    padding: 35px 26px 27px;
+  }
+
+  .popup__close {
+    top: 16px;
+    right: 16px;
+  }
+
+  .popup__close svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .popup-line {
+    top: -10%;
+    left: 20%;
+  }
+
+  .reservation-popup__number {
+    font-size: 37px !important;
+    margin-bottom: 17px;
+  }
+
+  .reservation-popup__text {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 75em) {
+@supports (width: clamp( 45.4375rem , 17.0056818182rem  +  142.1590909091vw , 123.625rem )) {
+    .popup-line {
+      width: clamp( 45.4375rem , 17.0056818182rem  +  142.1590909091vw , 123.625rem );
+    }
+}
+
+@supports not (width: clamp( 45.4375rem , 17.0056818182rem  +  142.1590909091vw , 123.625rem )) {
+    .popup-line {
+      width: calc(45.4375rem + 78.1875 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (height: clamp( 37.5rem , 35.9090909091rem  +  7.9545454545vw , 41.875rem )) {
+    .popup-line {
+      height: clamp( 37.5rem , 35.9090909091rem  +  7.9545454545vw , 41.875rem );
+    }
+}
+
+@supports not (height: clamp( 37.5rem , 35.9090909091rem  +  7.9545454545vw , 41.875rem )) {
+    .popup-line {
+      height: calc(37.5rem + 4.375 * (100vw - 20rem) / 55);
+    }
+}
+}
