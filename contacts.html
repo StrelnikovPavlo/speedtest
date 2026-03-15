@@ -8,7 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="css/contacts.min.css?_v=20260315171450">
+	<link rel="preload" href="css/contacts.min.css?_v=20260315214609" as="style" onload="this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/contacts.min.css?_v=20260315214609">
+	</noscript>
 </head>
 
 <body>
@@ -227,7 +230,11 @@
 			</div>
 		</div>
 	</div>
-	<div id="success-send" aria-hidden="true" class="popup reservation-popup">
+
+	<script src="js/contacts.min.js?_v=20260315214609" defer></script>
+	<script src="js/main.min.js?_v=20260315214609" defer></script>
+
+	<div id="success-send" class="popup reservation-popup">
 		<div class="popup__wrapper">
 			<svg class="popup-line" xmlns="http://www.w3.org/2000/svg" width="1920" height="673" viewBox="0 0 1920 673" fill="none">
 				<path d="M1970 220.572C1747 399.572 1308.56 330.572 1273.5 203.072C1257 143.072 1325.5 87.5718 1461 193.215C1592 -288.928 1784.75 254.838 1382.5 573.072C1033 849.572 266 490.5 -8 96" stroke="url(#paint0_linear_242_2373)" stroke-width="3" />
@@ -250,10 +257,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="js/libs/popup.min.js?_v=20260315171450"></script>
-	<script src="js/contacts.min.js?_v=20260315171450"></script>
-	<script src="js/main.min.js?_v=20260315171450"></script>
 </body>
 
 </html>

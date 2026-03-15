@@ -8,7 +8,10 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="css/privacy-policy.min.css?_v=20260315171450">
+	<link rel="preload" href="css/privacy-policy.min.css?_v=20260315214609" as="style" onload="this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="css/privacy-policy.min.css?_v=20260315214609">
+	</noscript>
 </head>
 
 <body>
@@ -337,8 +340,32 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/privacy-policy.min.js?_v=20260315171450"></script>
-	<script src="js/main.min.js?_v=20260315171450"></script>
+	<script src="js/privacy-policy.min.js?_v=20260315214609" defer></script>
+	<script src="js/main.min.js?_v=20260315214609" defer></script>
+
+	<div id="success-send" class="popup reservation-popup">
+		<div class="popup__wrapper">
+			<svg class="popup-line" xmlns="http://www.w3.org/2000/svg" width="1920" height="673" viewBox="0 0 1920 673" fill="none">
+				<path d="M1970 220.572C1747 399.572 1308.56 330.572 1273.5 203.072C1257 143.072 1325.5 87.5718 1461 193.215C1592 -288.928 1784.75 254.838 1382.5 573.072C1033 849.572 266 490.5 -8 96" stroke="url(#paint0_linear_242_2373)" stroke-width="3" />
+				<defs>
+					<linearGradient id="paint0_linear_242_2373" x1="676" y1="623.5" x2="1793.5" y2="291.5" gradientUnits="userSpaceOnUse">
+						<stop stop-color="white" />
+						<stop offset="1" stop-color="#8DC1FF" />
+					</linearGradient>
+				</defs>
+			</svg>
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+						<path d="M9.91602 9.91699L24.0827 24.0837M9.91602 24.0837L24.0827 9.91699" stroke="#87BFFF" stroke-width="3.54167" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<div class="reservation-popup__content">
+					<div class="reservation-popup__number title-section">Ваше повідомлення відправлено</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
