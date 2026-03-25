@@ -7,10 +7,13 @@
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" href="/fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/Gilroy-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/Gilroy-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 
-	<link rel="preload" href="css/reservation.min.css?_v=20260315214609" as="style" onload="this.rel='stylesheet'">
+	<link rel="preload" href="css/reservation.min.css?_v=20260325153457" as="style" onload="this.rel='stylesheet'">
 	<noscript>
-		<link rel="stylesheet" href="css/reservation.min.css?_v=20260315214609">
+		<link rel="stylesheet" href="css/reservation.min.css?_v=20260325153457">
 	</noscript>
 </head>
 
@@ -128,9 +131,9 @@
 			<nav class="breadcrumbs">
 				<div class="breadcrumbs__container">
 					<ul>
-						<li><a href="#">Головна</a></li>
+						<li><a data-popup="#success-send" href="#">Головна</a></li>
 						<li><a href="#">Послуги</a></li>
-						<li><a data-popup="#number-reservation" href="#" class="_active">Бронювання консультації</a></li>
+						<li><a href="#" class="_active">Бронювання консультації</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -348,10 +351,6 @@
 			</div>
 		</footer>
 	</div>
-
-	<script src="js/reservation.min.js?_v=20260315214609" defer></script>
-	<script src="js/main.min.js?_v=20260315214609" defer></script>
-
 	<div id="number-reservation" class="popup reservation-popup">
 		<div class="popup__wrapper">
 			<svg class="popup-line" xmlns="http://www.w3.org/2000/svg" width="1920" height="673" viewBox="0 0 1920 673" fill="none">
@@ -399,6 +398,11 @@
 			</div>
 		</div>
 	</div>
+
+	<script src="js/reservation.min.js?_v=20260325153457" defer></script>
+	<script src="js/main.min.js?_v=20260325153457" defer></script>
+
+
 </body>
 
 </html>
